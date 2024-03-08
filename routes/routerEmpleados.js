@@ -1,6 +1,13 @@
 const express = require('express');
 const routerEmpleados = express.Router();
 const { empleadoController } = require('../controllers/empleadoController');
+/*const middlewareEpleados = (req,res,next)=>{
+    ip = req.ip;
+    console.log(ip);
+    next();
+}
+*/
+//routerEmpleados.use(middlewareEpleados);
 
 routerEmpleados.get('/',empleadoController.getAllEmpleados);
 

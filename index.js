@@ -6,8 +6,11 @@ app.use(cors());
 app.use(express.json());
 
 //Routes
-const { routerEmpleados } = require('./routes/routerEmpleados')
-app.use('/empleados',routerEmpleados)
+const { routerEmpleados } = require('./routes/routerEmpleados');
+app.use('/empleados',routerEmpleados);
+
+const { routerAuth } = require('./routes/routerAuth');
+app.use('/auth',routerAuth);
 
 /*
 app.post('/create',(req,res)=>{
